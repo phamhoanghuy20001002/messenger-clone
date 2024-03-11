@@ -5,7 +5,7 @@ import { HiArrowLeftOnRectangle, HiUsers } from "react-icons/hi2";
 import { signOut } from "next-auth/react"
 import useConversation from "./useConversation";
 
-const userRoutes = () => {
+const useRoutes = () => {
     const pathname = usePathname();
     const { conversationId } = useConversation();
     const routes = useMemo(() => [
@@ -31,4 +31,4 @@ const userRoutes = () => {
     ], [pathname, conversationId]);
     return routes;
 }
-export default userRoutes;
+export default useRoutes;
